@@ -38,4 +38,4 @@ jobs:
     - name: Build
       run: npm run build
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./dist/cake-ui-app s3://dev.getcake.io --delete
+      run: aws s3 sync ./dist/cake-ui-app s3://getcake.io --delete

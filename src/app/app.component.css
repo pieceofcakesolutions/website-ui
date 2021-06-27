@@ -1,5 +1,4 @@
 .page-wrapper {
-    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -46,6 +45,7 @@ mat-card {
     display: flex;
     flex-direction: column;
     flex: auto;
+    margin-top: 1rem;
 }
 a {
     text-decoration: none;

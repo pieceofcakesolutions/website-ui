@@ -1,8 +1,17 @@
 import { Component } from '@angular/core';
 
+export interface Comment {
+  content: string;
+  author: string;
+  upvotes: number;
+  downvotes: number;
+}
 export interface BlogPost {
   title: string;
   content: string;
+  comments: Comment[];
+  summary: string;
+  link?: string;
 };
 
 @Component({
@@ -21,7 +30,12 @@ export class AppComponent {
         <p>Pulumi works with a wide range of providers to offer you a large spread of capabilities to empower your automation workflows.</p>
         <p>The company is fast at work to constantly upgrade their product based on their customer feedback. Our Engineers have worked with Pulumi for years and have experienced this rapid success firsthand. We want to make using Pulumi a piece of cake for you and your company!</p>
         <p>Look forward to our upcoming posts on how to manage your cloud infrastructure with Pulumi!</p>
-      `
+      `,
+      comments: [],
+      summary: `
+        <p>Take a look at out favorite tool, Pulumi, and see how it can fit into your toolchain!</p>
+      `,
+      link: "/blog/1",
     },
     {
       title: "Our top 5 reasons to build infrastructure as code!",
@@ -33,7 +47,12 @@ export class AppComponent {
           <li>Common patterns are easily abstracted through templates or module style packages.</li>
           <li>Projects can be encapsulated so that all resources can be easily deployed or destroyed, removing any concern of orphaning items or forgetting resources.</li>
         </ol>
-      `
+      `,
+      comments: [],
+      summary: `
+        <p>Check out how to benefit from building infrastructure for any project with code.</p>
+      `,
+      link: '/blog/2',
     }
   ];
 }

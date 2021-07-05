@@ -260,7 +260,7 @@ h3 {
 }
 
 a {
-    color: #d52349;
+    color: #FF0066;
     text-decoration: underline;
 }
 
@@ -1493,7 +1493,7 @@ button,
     cursor: pointer;
     border: 0;
     border-radius: 5px;
-    background: #d52349;
+    background: #FF0066;
     color: #fff !important;
     font-weight: 700;
     outline: 0;
@@ -1713,7 +1713,7 @@ ul.dates .date {
     position: absolute;
     left: 0;
     top: 1.3em;
-    background-color: #d52349;
+    background-color: #FF0066;
     height: 3.5em;
     text-align: center;
     color: #fff;
@@ -1728,7 +1728,7 @@ ul.dates .date:after {
     position: absolute;
     bottom: 0;
     right: -1.2em;
-    border-left: solid 1.25em #d52349;
+    border-left: solid 1.25em #FF0066;
     border-top: solid 1.8em transparent;
     border-bottom: solid 1.8em transparent;
 }
@@ -1903,7 +1903,7 @@ ul.social li a.fa-google-plus:hover {
 .icon.featured {
     position: relative;
     display: inline-block;
-    background-color: #d52349;
+    background-color: #FF0066;
     width: 9em;
     padding: 1.75em 0 0.75em 0;
     border-top-left-radius: 5px;
@@ -1923,7 +1923,7 @@ ul.social li a.fa-google-plus:hover {
     position: absolute;
     bottom: -1.95em;
     left: 0;
-    border-top: solid 2em #d52349;
+    border-top: solid 2em #FF0066;
     border-left: solid 4.5em transparent;
     border-right: solid 4.5em transparent;
 }
@@ -2009,7 +2009,7 @@ ul.social li a.fa-google-plus:hover {
 }
 
 #nav>ul>li.current>a {
-    background: #d52349;
+    background: #FF0066;
     color: #fff !important;
     font-weight: 700;
 }
@@ -2093,7 +2093,7 @@ ul.social li a.fa-google-plus:hover {
 }
 
 #banner header p {
-    color: #d52349;
+    color: #FF0066;
     padding: 0;
     font-style: normal;
     margin: 0;

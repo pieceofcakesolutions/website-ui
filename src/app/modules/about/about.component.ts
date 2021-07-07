@@ -17,7 +17,7 @@ export interface Employee {
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  defaultAvatarUrl = 'https://material.angular.io/assets/img/examples/shiba1.jpg';
+  defaultAvatarUrl = 'assets/images/default_company_avatar.png';
 
   employees: Employee[] = [
     {

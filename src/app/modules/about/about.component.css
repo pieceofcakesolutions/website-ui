@@ -1,0 +1,14 @@
+mat-card{
+    margin-bottom: 2em;
+    border-bottom-style: inset;
+}
+mat-card-content {
+    margin-top: 1em;
+}
+.social {
+    margin: 1em 0;
+}
+h3 {
+    font-size: 1.4em;
+    margin-top: 1em;
+}

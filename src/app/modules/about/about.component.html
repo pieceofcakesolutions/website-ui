@@ -4,30 +4,40 @@
     <article class="box post">
         <a href="#" class="image featured"><img src="assets/images/pic01.jpg" alt="" /></a>
         <header>
-            <h2>About Us</h2>
+            <h1>About Us</h1>
             <p>Our job is make solving your problem a piece of cake.</p>
         </header>
         <p>
-            Established in summer of 2021, Piece of Cake Solutions, LLC is a company founded bya group of friends who are united in their love for working with technology and helping others.
+            Established in summer of 2021, Piece of Cake Solutions, LLC is a company founded by a group of friends who
+            are united in their love for working with technology and helping others.
         </p>
         <section>
             <header>
-                <h3>Our Mission</h3>
+                <h2>Our Mission</h2>
             </header>
             <p>
-                We strive to deliver exactly what is needed to make our customers successful at the best price possible, eliminating any uneccessary cost or time from being wasted.
+                We strive to deliver exactly what is needed to make our customers successful at the best price possible,
+                eliminating any uneccessary cost or time from being wasted.
             </p>
         </section>
         <section>
             <header>
-                <h3>Meet the team</h3>
+                <h2>Meet the team</h2>
             </header>
-            <p>Jeff Morrell</p>
-            <p>Derek Spiner</p>
-            <p>Joshua Paredes</p>
-            <p>Michael Bratton</p>
-            <p>Joshua Fisk</p>
-            <p>Brandon Kerth</p>
+            <mat-card *ngFor="let employee of employees" class="mat-elevation-z0">
+                <mat-card-title>{{employee.name}}</mat-card-title>
+                <mat-card-content>
+                    <h3>Background Info</h3>
+                    {{employee.backgroundInfo}}
+                    <h3>Interests</h3>
+                    <mat-chip-list>
+                        <mat-chip class="tag" *ngFor="let interest of employee.interests">{{interest}}</mat-chip>
+                    </mat-chip-list>
+                        <h3>Social</h3>
+                        <i class="fab fa-linkedin fa-3x"></i>
+                        <i class="fab fa-facebook fa-3x"></i>
+                </mat-card-content>
+            </mat-card>
         </section>
     </article>
 </div>

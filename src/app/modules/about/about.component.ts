@@ -61,6 +61,7 @@ export class AboutComponent implements OnInit {
       name: 'Mike Bratton',
       interests: ['Rock climbing', 'Camping', 'Running', 'Guitar', 'Music'],
       linkedin: 'https://www.linkedin.com/in/michael-bratton-149587aa',
+      avatarUrl: 'assets/images/bratton_company_avatar.png',
     },
   ];
 

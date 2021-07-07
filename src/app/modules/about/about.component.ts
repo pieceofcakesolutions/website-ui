@@ -56,8 +56,9 @@ export class AboutComponent implements OnInit {
       avatarUrl: 'assets/images/paredes_company_avatar.png',
     },
     {
-      name: 'Michael Bratton',
+      name: 'Mike Bratton',
       interests: ['Rock climbing', 'Camping', 'Running', 'Guitar', 'Music'],
+      linkedin: 'https://www.linkedin.com/in/michael-bratton-149587aa',
     },
   ];
 

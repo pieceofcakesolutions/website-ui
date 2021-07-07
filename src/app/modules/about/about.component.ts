@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 export interface Employee {
   name: string,
+  avatarUrl?: string,
   backgroundInfo?: string,
   interests?: string[],
   title?: string,
@@ -16,6 +17,7 @@ export interface Employee {
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  defaultAvatarUrl = 'https://material.angular.io/assets/img/examples/shiba1.jpg';
 
   employees: Employee[] = [
     {
@@ -36,6 +38,7 @@ export class AboutComponent implements OnInit {
       twitter: "https://twitter.com/thejeffmorrell",
       linkedin: "https://www.linkedin.com/in/jeff-morrell-b5651526",
       title: "CEO and CVO",
+      avatarUrl: 'assets/images/morrell_company_avatar.png'
     },
     {
       name: 'Josh Fisk',

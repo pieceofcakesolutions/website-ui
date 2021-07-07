@@ -24,8 +24,11 @@
                 <h3>Meet the team</h3>
             </header>
             <mat-card *ngFor="let employee of employees" class="mat-elevation-z0">
-                <mat-card-title>{{employee.name}}</mat-card-title>
-                <mat-card-subtitle *ngIf="employee.title !== undefined">{{employee.title}}</mat-card-subtitle>
+                <mat-card-header>
+                    <div mat-card-avatar class="employee-avatar" style="background-image: url('{{employee.avatarUrl || defaultAvatarUrl}}');"></div>
+                    <mat-card-title>{{employee.name}}</mat-card-title>
+                    <mat-card-subtitle *ngIf="employee.title !== undefined">{{employee.title}}</mat-card-subtitle>
+                </mat-card-header>
                 <mat-card-content>
                     <p>
                         {{employee.backgroundInfo}}

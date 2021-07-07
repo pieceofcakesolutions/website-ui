@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogService } from './blog.service';
 import { BlogPost } from './models/BlogPost';
 
 @Component({
@@ -8,9 +9,18 @@ import { BlogPost } from './models/BlogPost';
 })
 export class BlogComponent implements OnInit {
   blogPosts: BlogPost[] = []
-  constructor() { }
+  blogs: BlogService;
 
+  constructor(_blogs: BlogService) {
+    this.blogs = _blogs;
+    this.blogPosts = [];
+  }
+  
   ngOnInit(): void {
+    this.blogPosts = this.getBlogPosts();
+  }
+  getBlogPosts(){
+    return this.blogs.getPosts();
   }
 
 }

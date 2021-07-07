@@ -2,12 +2,19 @@ mat-card{
     margin-bottom: 2em;
     border-bottom-style: inset;
 }
+mat-card > div {
+    display: inline-block;
+}
 mat-card-content {
     margin-top: 1em;
 }
 .social>a {
     color: black;
     margin: 0 5px
+}
+.employee-avatar {
+    background-size: cover;
+    padding-bottom: .5em;
 }
 mat-chip {
     font-size: .8em;

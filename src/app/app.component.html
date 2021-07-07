@@ -8,35 +8,11 @@
         <!-- Nav -->
         <nav id="nav">
             <ul>
-                <li class="current"><a [routerLink]="['home']">Home</a></li>
-                <li><a [routerLink]="['about']">About</a></li>
-                <li><a [routerLink]="['blog']">Blog</a></li>
-                <li><a [routerLink]="['contact']">Contact</a></li>
-                <li>
-                    <a [routerLink]="['services']">Services</a>
-                    <ul>
-                        <li>
-                            <a [routerLink]="['services/3d']">3D</a>
-                            <ul>
-                                <li>
-                                    <a href="#">Request a print quote</a>
-                                    <a href="#">Schedule a design session</a>
-                                    <a href="#">Frequently asked questions</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a [routerLink]="['services/it']">IT</a>
-                            <ul>
-                                <li>
-                                    <a href="#">Request an over the phone consultation</a>
-                                    <a href="#">Managed IT services</a>
-                                    <a href="#">Frequently asked questions</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+                <li routerLinkActive="current" [routerLink]="['home']"><a>Home</a></li>
+                <li routerLinkActive="current" [routerLink]="['about']"><a>About</a></li>
+                <li routerLinkActive="current" [routerLink]="['blog']"><a>Blog</a></li>
+                <li routerLinkActive="current" [routerLink]="['contact']"><a>Contact</a></li>
+                <li routerLinkActive="current" [routerLink]="['services']"><a>Services</a></li>
             </ul>
         </nav>
         <!-- Banner -->

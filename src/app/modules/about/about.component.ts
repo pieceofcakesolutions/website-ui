@@ -5,6 +5,9 @@ export interface Employee {
   backgroundInfo?: string,
   interests?: string[],
   title?: string,
+  twitter?: string,
+  linkedin?: string,
+  email?: string,
 }
 
 @Component({
@@ -26,7 +29,11 @@ export class AboutComponent implements OnInit {
     {
       name: 'Jeff Morrell',
       backgroundInfo: 'Over 10 years experience as an IT professional focusing my skills on DevOps and Cloud Engineering. I have found that over the years my greatest passion has been when teaching others about and how to use new technologies. That is why as a cofounder of this company I have volunteered my vision and direction around this passion to help others succeed in their ventures.',
-      interests: ['Skateboarding', 'Electronics', '3D Printing', 'Kayaking', 'Hiking']
+      interests: ['Skateboarding', 'Electronics', '3D Printing', 'Kayaking', 'Hiking'],
+      email: "jemorrell@gmail.com",
+      twitter: "https://twitter.com/thejeffmorrell",
+      linkedin: "https://www.linkedin.com/in/jeff-morrell-b5651526",
+      title: "CEO and CVO",
     },
     {
       name: 'Josh Fisk',
@@ -50,5 +57,16 @@ export class AboutComponent implements OnInit {
     body.classList.remove("homepage");   //remove the class
     body.classList.add("no-sidebar");   //add the class
   }
-
+  hasSocialMedia(employee: Employee) {
+    if (
+      employee.email !== undefined
+      || employee.linkedin !== undefined
+      || employee.twitter !== undefined
+    ) {
+      return true
+    }
+    else {
+      return false
+    }
+  }
 }

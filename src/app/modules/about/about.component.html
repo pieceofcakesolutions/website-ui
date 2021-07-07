@@ -26,16 +26,24 @@
             </header>
             <mat-card *ngFor="let employee of employees" class="mat-elevation-z0">
                 <mat-card-title>{{employee.name}}</mat-card-title>
+                <mat-card-subtitle *ngIf="employee.title !== undefined">{{employee.title}}</mat-card-subtitle>
                 <mat-card-content>
-                    <h3>Background Info</h3>
-                    {{employee.backgroundInfo}}
-                    <h3>Interests</h3>
-                    <mat-chip-list>
-                        <mat-chip class="tag" *ngFor="let interest of employee.interests">{{interest}}</mat-chip>
-                    </mat-chip-list>
-                        <h3>Social</h3>
-                        <i class="fab fa-linkedin fa-3x"></i>
-                        <i class="fab fa-facebook fa-3x"></i>
+                    <p>
+                        {{employee.backgroundInfo}}
+                    </p>
+                    <h3 *ngIf="employee.interests && employee.interests.length > 0">Interests</h3>
+                    <p>
+                        <mat-chip-list>
+                            <mat-chip class="tag" *ngFor="let interest of employee.interests">{{interest}}</mat-chip>
+                        </mat-chip-list>
+                    </p>
+                    
+                    <h3 *ngIf="hasSocialMedia(employee)">Social</h3>
+                    <p class="social">
+                        <a *ngIf="employee.email !== undefined" href="mailto:{{employee.email}}"><i class="fas fa-at fa-2x"></i></a>
+                        <a *ngIf="employee.linkedin !== undefined" href="{{employee.linkedin}}"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a *ngIf="employee.twitter !== undefined" href="{{employee.twitter}}"><i  class="fab fa-twitter fa-2x"></i></a>
+                    </p>
                 </mat-card-content>
             </mat-card>
         </section>

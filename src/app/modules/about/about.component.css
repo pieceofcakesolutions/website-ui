@@ -5,8 +5,10 @@ mat-card{
 mat-card-content {
     margin-top: 1em;
 }
-.social {
-    margin: 1em 0;
+.social>a {
+    color: black;
+    margin: 0 5px
+    
 }
 mat-chip {
     font-size: .8em;

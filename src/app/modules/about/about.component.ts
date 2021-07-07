@@ -43,7 +43,8 @@ export class AboutComponent implements OnInit {
     {
       name: 'Josh Fisk',
       backgroundInfo: 'Quality-centered IT professional with 12 years of experience focused on team leadership, desktop and help desk support. Proven ability to create and deliver solutions that meet corporate objectives tied to business and technology performance.',
-      interests: ['Woodworking', 'Electronics', 'Guitar', 'Music']
+      interests: ['Woodworking', 'Electronics', 'Guitar', 'Music'],
+      avatarUrl: 'assets/images/fisk_company_avatar.png'
     },
     {
       name: 'Josh Paredes',

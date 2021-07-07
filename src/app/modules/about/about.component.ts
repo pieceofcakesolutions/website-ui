@@ -52,6 +52,8 @@ export class AboutComponent implements OnInit {
     {
       name: 'Josh Paredes',
       interests: ['Guitar', 'Music', 'Traveling'],
+      linkedin: 'https://www.linkedin.com/in/joshua-paredes-30aaa292',
+      avatarUrl: 'assets/images/paredes_company_avatar.png',
     },
     {
       name: 'Michael Bratton',

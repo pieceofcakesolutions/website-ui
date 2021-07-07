@@ -39,7 +39,6 @@ export class AboutComponent implements OnInit {
       email: "jemorrell@gmail.com",
       twitter: "https://twitter.com/thejeffmorrell",
       linkedin: "https://www.linkedin.com/in/jeff-morrell-b5651526",
-      title: "Owner",
       avatarUrl: 'assets/images/morrell_company_avatar.png',
     },
     {
@@ -47,6 +46,8 @@ export class AboutComponent implements OnInit {
       backgroundInfo: 'Quality-centered IT professional with 12 years of experience focused on team leadership, desktop and help desk support. Proven ability to create and deliver solutions that meet corporate objectives tied to business and technology performance.',
       interests: ['Woodworking', 'Electronics', 'Guitar', 'Music'],
       avatarUrl: 'assets/images/fisk_company_avatar.png',
+      linkedin: 'http://linkedin.com/in/joshua-fisk-5291b05a',
+      email: 'fisk.josh@hotmail.com',
     },
     {
       name: 'Josh Paredes',

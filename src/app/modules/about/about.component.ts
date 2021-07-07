@@ -22,12 +22,12 @@ export class AboutComponent implements OnInit {
   employees: Employee[] = [
     {
       name: 'Brandon Kerth',
-      backgroundInfo: 'Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.',
-      interests: ['Guitar', 'Music', 'Traveling']
+      interests: ['Bass Guitar', 'Music', 'Traveling'],
+      email: "brandon.kerth@gmail.com",
+      linkedin: "https://www.linkedin.com/in/brandonkerth",
     },
     {
       name: 'Derek Spiner',
-      backgroundInfo: 'Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.',
       interests: ['Electronics', '3D Printing', 'Music', 'Cars'],
       email: "econislab@protonmail.com",
       linkedin: "https://www.linkedin.com/in/derek-spiner-professional/",
@@ -50,12 +50,10 @@ export class AboutComponent implements OnInit {
     },
     {
       name: 'Josh Paredes',
-      backgroundInfo: 'Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.',
       interests: ['Guitar', 'Music', 'Traveling'],
     },
     {
       name: 'Michael Bratton',
-      backgroundInfo: 'Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.',
       interests: ['Rock climbing', 'Camping', 'Running', 'Guitar', 'Music'],
     },
   ];

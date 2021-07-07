@@ -25,6 +25,8 @@ export class AboutComponent implements OnInit {
       interests: ['Bass Guitar', 'Music', 'Traveling'],
       email: "brandon.kerth@gmail.com",
       linkedin: "https://www.linkedin.com/in/brandonkerth",
+      backgroundInfo: "More than 6 years as an IT Support Specialist ranging from onsite MSP work to remote cloud support.  Since joining the industry, my focus has been on delivering repeatable patterns of success in enterprise environments.",
+      avatarUrl: 'assets/images/kerth_company_avatar.png',
     },
     {
       name: 'Derek Spiner',
@@ -59,6 +61,7 @@ export class AboutComponent implements OnInit {
       name: 'Mike Bratton',
       interests: ['Rock climbing', 'Camping', 'Running', 'Guitar', 'Music'],
       linkedin: 'https://www.linkedin.com/in/michael-bratton-149587aa',
+      avatarUrl: 'assets/images/bratton_company_avatar.png',
     },
   ];
 

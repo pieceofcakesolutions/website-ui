@@ -1,1 +1,29 @@
-<p>contact works!</p>
+<div class="container">
+    <!-- Content -->
+    <article class="box post">
+        <a href="#" class="image featured"><img src="assets/images/pic01.jpg" alt="" /></a>
+        <header>
+            <h2>Contact Us</h2>
+        </header>
+        <section>
+            <form [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Full Name" formControlName="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" aria-describedby="emailHelp"
+                        placeholder="Enter email" formControlName="email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Message</label>
+                    <textarea class="form-control" formControlName="message" name="message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!formData.valid">Submit</button>
+            </form>
+        </section>
+    </article>
+</div>

@@ -8,12 +8,10 @@ mat-card-content {
 .social>a {
     color: black;
     margin: 0 5px
-    
 }
 mat-chip {
     font-size: .8em;
 }
 h3 {
-    font-size: 1.2em;
-    margin-top: 1em;
+    font-size: 2em;
 }

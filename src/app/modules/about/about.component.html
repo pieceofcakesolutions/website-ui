@@ -1,10 +1,9 @@
 <div class="container">
-
     <!-- Content -->
     <article class="box post">
         <a href="#" class="image featured"><img src="assets/images/pic01.jpg" alt="" /></a>
         <header>
-            <h1>About Us</h1>
+            <h2>About Us</h2>
             <p>Our job is make solving your problem a piece of cake.</p>
         </header>
         <p>
@@ -13,7 +12,7 @@
         </p>
         <section>
             <header>
-                <h2>Our Mission</h2>
+                <h3>Our Mission</h3>
             </header>
             <p>
                 We strive to deliver exactly what is needed to make our customers successful at the best price possible,
@@ -22,7 +21,7 @@
         </section>
         <section>
             <header>
-                <h2>Meet the team</h2>
+                <h3>Meet the team</h3>
             </header>
             <mat-card *ngFor="let employee of employees" class="mat-elevation-z0">
                 <mat-card-title>{{employee.name}}</mat-card-title>
@@ -31,14 +30,14 @@
                     <p>
                         {{employee.backgroundInfo}}
                     </p>
-                    <h3 *ngIf="employee.interests && employee.interests.length > 0">Interests</h3>
+                    <h4 *ngIf="employee.interests && employee.interests.length > 0">Interests</h4>
                     <p>
                         <mat-chip-list>
                             <mat-chip class="tag" *ngFor="let interest of employee.interests">{{interest}}</mat-chip>
                         </mat-chip-list>
                     </p>
                     
-                    <h3 *ngIf="hasSocialMedia(employee)">Social</h3>
+                    <h4 *ngIf="hasSocialMedia(employee)">Social</h4>
                     <p class="social">
                         <a *ngIf="employee.email !== undefined" href="mailto:{{employee.email}}"><i class="fas fa-at fa-2x"></i></a>
                         <a *ngIf="employee.linkedin !== undefined" href="{{employee.linkedin}}"><i class="fab fa-linkedin fa-2x"></i></a>

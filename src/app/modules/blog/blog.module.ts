@@ -5,7 +5,6 @@ import { BlogRoutingModule } from './blog-routing.module';
 import { BlogComponent } from './blog.component';
 import { BlogService } from './blog.service';
 
-
 @NgModule({
   declarations: [
     BlogComponent,
@@ -18,4 +17,5 @@ import { BlogService } from './blog.service';
     BlogService,
   ]
 })
-export class BlogModule { }
+export class BlogModule { 
+}

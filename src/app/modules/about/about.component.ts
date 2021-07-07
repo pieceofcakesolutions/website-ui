@@ -28,7 +28,9 @@ export class AboutComponent implements OnInit {
     {
       name: 'Derek Spiner',
       backgroundInfo: 'Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.',
-      interests: ['Electronics', '3D Printing', 'Music', 'Cars']
+      interests: ['Electronics', '3D Printing', 'Music', 'Cars'],
+      email: "econislab@protonmail.com",
+      linkedin: "https://www.linkedin.com/in/derek-spiner-professional/",
     },
     {
       name: 'Jeff Morrell',
@@ -37,24 +39,24 @@ export class AboutComponent implements OnInit {
       email: "jemorrell@gmail.com",
       twitter: "https://twitter.com/thejeffmorrell",
       linkedin: "https://www.linkedin.com/in/jeff-morrell-b5651526",
-      title: "CEO and CVO",
-      avatarUrl: 'assets/images/morrell_company_avatar.png'
+      title: "Owner",
+      avatarUrl: 'assets/images/morrell_company_avatar.png',
     },
     {
       name: 'Josh Fisk',
       backgroundInfo: 'Quality-centered IT professional with 12 years of experience focused on team leadership, desktop and help desk support. Proven ability to create and deliver solutions that meet corporate objectives tied to business and technology performance.',
       interests: ['Woodworking', 'Electronics', 'Guitar', 'Music'],
-      avatarUrl: 'assets/images/fisk_company_avatar.png'
+      avatarUrl: 'assets/images/fisk_company_avatar.png',
     },
     {
       name: 'Josh Paredes',
       backgroundInfo: 'Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.',
-      interests: ['Guitar', 'Music', 'Traveling']
+      interests: ['Guitar', 'Music', 'Traveling'],
     },
     {
       name: 'Michael Bratton',
       backgroundInfo: 'Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.',
-      interests: ['Rock climbing', 'Camping', 'Running', 'Guitar', 'Music']
+      interests: ['Rock climbing', 'Camping', 'Running', 'Guitar', 'Music'],
     },
   ];
 

@@ -17,18 +17,22 @@ export interface Employee {
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  defaultAvatarUrl = 'https://material.angular.io/assets/img/examples/shiba1.jpg';
+  defaultAvatarUrl = 'assets/images/default_company_avatar.png';
 
   employees: Employee[] = [
     {
       name: 'Brandon Kerth',
-      backgroundInfo: 'Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.',
-      interests: ['Guitar', 'Music', 'Traveling']
+      interests: ['Bass Guitar', 'Music', 'Traveling'],
+      email: "brandon.kerth@gmail.com",
+      linkedin: "https://www.linkedin.com/in/brandonkerth",
+      backgroundInfo: "More than 6 years as an IT Support Specialist ranging from onsite MSP work to remote cloud support.  Since joining the industry, my focus has been on delivering repeatable patterns of success in enterprise environments.",
+      avatarUrl: 'assets/images/kerth_company_avatar.png',
     },
     {
       name: 'Derek Spiner',
-      backgroundInfo: 'Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.',
-      interests: ['Electronics', '3D Printing', 'Music', 'Cars']
+      interests: ['Electronics', '3D Printing', 'Music', 'Cars'],
+      email: "econislab@protonmail.com",
+      linkedin: "https://www.linkedin.com/in/derek-spiner-professional/",
     },
     {
       name: 'Jeff Morrell',
@@ -37,23 +41,27 @@ export class AboutComponent implements OnInit {
       email: "jemorrell@gmail.com",
       twitter: "https://twitter.com/thejeffmorrell",
       linkedin: "https://www.linkedin.com/in/jeff-morrell-b5651526",
-      title: "CEO and CVO",
-      avatarUrl: 'assets/images/morrell_company_avatar.png'
+      avatarUrl: 'assets/images/morrell_company_avatar.png',
     },
     {
       name: 'Josh Fisk',
       backgroundInfo: 'Quality-centered IT professional with 12 years of experience focused on team leadership, desktop and help desk support. Proven ability to create and deliver solutions that meet corporate objectives tied to business and technology performance.',
-      interests: ['Woodworking', 'Electronics', 'Guitar', 'Music']
+      interests: ['Woodworking', 'Electronics', 'Guitar', 'Music'],
+      avatarUrl: 'assets/images/fisk_company_avatar.png',
+      linkedin: 'http://linkedin.com/in/joshua-fisk-5291b05a',
+      email: 'fisk.josh@hotmail.com',
     },
     {
       name: 'Josh Paredes',
-      backgroundInfo: 'Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.',
-      interests: ['Guitar', 'Music', 'Traveling']
+      interests: ['Guitar', 'Music', 'Traveling'],
+      linkedin: 'https://www.linkedin.com/in/joshua-paredes-30aaa292',
+      avatarUrl: 'assets/images/paredes_company_avatar.png',
     },
     {
-      name: 'Michael Bratton',
-      backgroundInfo: 'Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.',
-      interests: ['Rock climbing', 'Camping', 'Running', 'Guitar', 'Music']
+      name: 'Mike Bratton',
+      interests: ['Rock climbing', 'Camping', 'Running', 'Guitar', 'Music'],
+      linkedin: 'https://www.linkedin.com/in/michael-bratton-149587aa',
+      avatarUrl: 'assets/images/bratton_company_avatar.png',
     },
   ];
 

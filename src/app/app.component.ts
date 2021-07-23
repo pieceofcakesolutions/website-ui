@@ -72,8 +72,8 @@ export class AppComponent {
           oauth: {
               domain: 'getcake.auth.us-east-1.amazoncognito.com',
               scope: ['phone', 'email', 'profile', 'openid', 'aws.cognito.signin.user.admin'],
-              redirectSignIn: 'http://localhost:4200/',
-              redirectSignOut: 'http://localhost:4200/',
+              redirectSignIn: 'https://getcake.io/',
+              redirectSignOut: 'https://getcake.io/',
               responseType: 'code' // or 'token', note that REFRESH token will only be generated when the responseType is code
           }
 

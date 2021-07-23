@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer.component';
+import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FooterComponent } from './footer.component';
     MatButtonModule,
     MatCardModule,
     AppRoutingModule,
+    AmplifyUIAngularModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

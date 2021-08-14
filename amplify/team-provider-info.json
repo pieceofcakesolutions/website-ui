@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cakeuiapp-dev-205720-authRole",
+      "UnauthRoleArn": "arn:aws:iam::673021525887:role/amplify-cakeuiapp-dev-205720-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::673021525887:role/amplify-cakeuiapp-dev-205720-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cakeuiapp-dev-205720-deployment",
+      "UnauthRoleName": "amplify-cakeuiapp-dev-205720-unauthRole",
+      "StackName": "amplify-cakeuiapp-dev-205720",
+      "StackId": "arn:aws:cloudformation:us-east-1:673021525887:stack/amplify-cakeuiapp-dev-205720/7e371280-f0d9-11eb-a8df-0a35f6ddac11",
+      "AmplifyAppId": "d3vmkns4a7j8ev"
+    },
+    "categories": {
+      "function": {
+        "cakeuiapp75512d49DefineAuthChallenge": {},
+        "cakeuiapp75512d49CreateAuthChallenge": {},
+        "cakeuiapp75512d49VerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": ""
+        },
+        "cakeuiapp75512d49CustomMessage": {
+          "REDIRECTURL": "https://getcake.io/home",
+          "EMAILSUBJECT": "Confirm your account to Get Cake!",
+          "EMAILMESSAGE": "Follow the link below to verify your getcake.io account!"
+        }
+      },
+      "auth": {
+        "cakeuiapp75512d49": {}
+      }
+    }
+  }
+}

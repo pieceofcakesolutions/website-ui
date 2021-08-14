@@ -1,4 +1,4 @@
-<amplify-authenticator></amplify-authenticator>
+
 <div id="page-wrapper">
 
     <!-- Header -->
@@ -14,7 +14,11 @@
                 <li routerLinkActive="current" [routerLink]="['blog']"><a>Blog</a></li>
                 <li routerLinkActive="current" [routerLink]="['contact']"><a>Contact</a></li>
                 <li routerLinkActive="current" [routerLink]="['services']"><a>Services</a></li>
+                <li *ngIf="isUserLoggedIn"><a href="javascript:void(0)" (click)="login()">{{userName}}</a></li>
+                <li *ngIf="!isUserLoggedIn"><a href="javascript:void(0)" (click)="login()">Login</a></li>
+                
             </ul>
+            
         </nav>
         <!-- Banner -->
         <section id="banner" *ngIf="isHome()">

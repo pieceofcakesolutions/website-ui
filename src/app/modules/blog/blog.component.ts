@@ -17,10 +17,10 @@ export class BlogComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.blogPosts = this.getBlogPosts();
+    this.getBlogPosts();
   }
   getBlogPosts(){
-    return this.blogs.getPosts();
+    return this.blogs.getPosts().subscribe(posts => this.blogPosts = posts.blogs);
   }
 
 }

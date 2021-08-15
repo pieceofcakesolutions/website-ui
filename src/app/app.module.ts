@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer.component';
 import { AmplifyUIAngularModule } from '@aws-amplify/ui-angular';
 import { HttpClientModule } from '@angular/common/http';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     AppRoutingModule,
     AmplifyUIAngularModule,
+    QuillModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

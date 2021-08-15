@@ -1,0 +1,21 @@
+<div class="container">
+    <!-- Content -->
+    <article class="box post">
+        <form [formGroup]="newBlogPostForm" (ngSubmit)="onSubmit()">
+            <header>
+                <h2><input matInput formControlName="title" placeholder="Title" required></h2>
+                <p><input matInput formControlName="subtitle" placeholder="Subtitle"></p>
+            </header>
+            <mat-form-field class="w50">
+                <textarea matInput maxlength="50" rows="1" cols="50" formControlName="description" placeholder="Description"></textarea>
+            </mat-form-field>
+            <rich-text-editor [control]="getContentControl()">
+            </rich-text-editor>
+            <footer>
+                <button type="submit" class="submit-button" color="primary" mat-raised-button>Save</button>
+                <button class="margin-left" type="button" mat-raised-button color="warn"
+                    (click)="onDelete()">Delete</button>
+            </footer>
+        </form>
+    </article>
+</div>

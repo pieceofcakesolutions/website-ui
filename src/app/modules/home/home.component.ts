@@ -5,7 +5,7 @@ import { BlogPost } from '../blog/models/BlogPost';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
   blogPosts: BlogPost[] = []
@@ -25,5 +25,4 @@ export class HomeComponent implements OnInit {
       this.blogPosts = posts.blogs
     });
   }
-
 }

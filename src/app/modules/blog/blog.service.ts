@@ -1,9 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { BlogPost } from './models/BlogPost';
-import { BLOG_POSTS } from './models/BLOG_POSTS';
 import { catchError, map, tap } from 'rxjs/operators';
 import { GetBlogPostsResult } from './models/GetBlogPostsResult';
 
@@ -13,30 +12,81 @@ import { GetBlogPostsResult } from './models/GetBlogPostsResult';
 export class BlogService {
 
   blogPosts: BlogPost[];
-  blogUrl: string = environment.blogUrl;
+  postsUrl: string = `${environment.blogUrl}/Posts`;
   constructor(private http: HttpClient) {
     this.blogPosts = [];
-
   }
 
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  };
 
+  /**
+   * GET /Posts
+   */
   getPosts(): Observable<GetBlogPostsResult> {
-    return this.http.get<GetBlogPostsResult>(`${this.blogUrl}/Posts`)
+    return this.http.get<GetBlogPostsResult>(this.postsUrl)
       .pipe(
         tap(_ => this.log('fetched blog posts')),
         catchError(this.handleError<GetBlogPostsResult>('getPosts'))
       );
   }
 
+  /**
+   * GET /Posts/{id}
+   */
   getPost(id: string): Observable<BlogPost> {
-
-    return this.http.get<BlogPost>(`${this.blogUrl}/Posts/${id}`)
+    return this.http.get<BlogPost>(`${this.postsUrl}/${id}`)
       .pipe(
         tap(_ => this.log(`fetched blog post id=${id}`)),
         catchError(this.handleError<BlogPost>(`getPost id=${id}`))
       );
   }
 
+    /**
+   * GET /Posts?
+   */
+  /* GET heroes whose name contains search term */
+  searchBlogPosts(term: string): Observable<BlogPost[]> {
+    if (!term.trim()) {
+      // if not search term, return empty hero array.
+      return of([]);
+    }
+    return this.http.get<BlogPost[]>(`${this.postsUrl}/?name=${term}`).pipe(
+      tap(x => x.length ?
+        this.log(`found heroes matching "${term}"`) :
+        this.log(`no heroes matching "${term}"`)),
+      catchError(this.handleError<BlogPost[]>('searchBlogPosts', []))
+    );
+  }
+
+  /** PUT: update the hero on the server */
+  updatePost(post: BlogPost): Observable<any> {
+    return this.http.put(`${this.postsUrl}/${post.id}`, post, this.httpOptions).pipe(
+      tap(_ => this.log(`updated blogPost id=${post.id}`)),
+      catchError(this.handleError<any>('updatePost'))
+    );
+  }
+
+  /**
+   * POST /Posts
+   */
+  addPost(post: BlogPost): Observable<BlogPost> {
+    return this.http.post<BlogPost>(this.postsUrl, post, this.httpOptions).pipe(
+      tap((newPost: BlogPost) => this.log(`added blogPost w/ id=${newPost.id}`)),
+      catchError(this.handleError<BlogPost>('addBlogPost'))
+    );
+  }
+
+  /**
+   * DELETE /Posts
+   */
+  deletePost(post: BlogPost): Observable<any> {
+    return this.http.delete<BlogPost>(`${this.postsUrl}/${post.id}`).pipe(
+      tap((newPost: BlogPost) => this.log(`added blogPost w/ id=${newPost.id}`)),
+      catchError(this.handleError<BlogPost>('addBlogPost'))
+    );
+  }
   /**
  * Handle Http operation that failed.
  * Let the app continue.
@@ -55,10 +105,6 @@ export class BlogService {
       // Let the app keep running by returning an empty result.
       return of(result as T);
     };
-  }
-
-  addPost(post: BlogPost) {
-    this.blogPosts.push(post);
   }
 
   log(message: string) {

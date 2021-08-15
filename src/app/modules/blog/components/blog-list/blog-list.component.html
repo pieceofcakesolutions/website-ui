@@ -3,6 +3,7 @@
     <section>
         <header class="major">
             <h2>From the blog</h2>
+            <p><button [routerLink]="['/blog/add']">Add</button></p>
         </header>
         <div class="row">
             <div class="col-6 col-12-small" *ngFor="let post of blogPosts">
@@ -11,10 +12,10 @@
                     <header>
                         <h3>{{post.title}}</h3>
                     </header>
-                    <section [innerHTML]="post.summary"></section>
+                    <section [innerHTML]="post.description"></section>
                     <footer>
                         <ul class="actions">
-                            <li><a href="{{post.link || '#'}}" class="button icon solid fa-file-alt">Read</a></li>
+                            <li><a href="/blog/view/{{post.id}}" class="button icon solid fa-file-alt">Read</a></li>
                         </ul>
                     </footer>
                 </section>

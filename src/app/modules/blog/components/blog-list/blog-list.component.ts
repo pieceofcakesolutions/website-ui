@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogService } from './blog.service';
-import { BlogPost } from './models/BlogPost';
+import { BlogService } from '../../blog.service';
+import { BlogPost } from '../../models/BlogPost';
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css']
+  selector: 'app-blog-list',
+  templateUrl: './blog-list.component.html',
+  styleUrls: ['./blog-list.component.scss']
 })
-export class BlogComponent implements OnInit {
+export class BlogListComponent implements OnInit {
   blogPosts: BlogPost[] = []
   blogs: BlogService;
 
@@ -22,5 +22,7 @@ export class BlogComponent implements OnInit {
   getBlogPosts(){
     return this.blogs.getPosts().subscribe(posts => this.blogPosts = posts.blogs);
   }
-
+  ngOnDestroy(): void {
+    
+  }
 }

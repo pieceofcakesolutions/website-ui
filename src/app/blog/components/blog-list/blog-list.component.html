@@ -1,0 +1,25 @@
+<div class="col-12">
+    <!-- Blog -->
+    <section>
+        <header class="major">
+            <h2>From the blog</h2>
+            <p><button [routerLink]="['/blog/add']" *ngIf="isLoggedIn()">Add</button></p>
+        </header>
+        <div class="row">
+            <div class="col-6 col-12-small" *ngFor="let post of blogPosts">
+                <section class="box">
+                    <a href="#" class="image featured"><img src="assets/images/pic08.jpg" alt="" /></a>
+                    <header>
+                        <h3>{{post.title}}</h3>
+                    </header>
+                    <section [innerHTML]="post.description"></section>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="/blog/view/{{post.id}}" class="button icon solid fa-file-alt">Read</a></li>
+                        </ul>
+                    </footer>
+                </section>
+            </div>
+        </div>
+    </section>
+</div>

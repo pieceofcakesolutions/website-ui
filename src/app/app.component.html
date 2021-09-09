@@ -14,8 +14,9 @@
                 <li routerLinkActive="current" [routerLink]="['blog']"><a>Blog</a></li>
                 <li routerLinkActive="current" [routerLink]="['contact']"><a>Contact</a></li>
                 <li routerLinkActive="current" [routerLink]="['services']"><a>Services</a></li>
-                <li *ngIf="isUserLoggedIn"><a href="javascript:void(0)" (click)="login()">{{userName}}</a></li>
-                <li *ngIf="!isUserLoggedIn"><a href="javascript:void(0)" (click)="login()">Login</a></li>
+                <li *ngIf="isLoggedIn()"><a href="javascript:void(0)">{{user.username}}</a></li>
+                <li *ngIf="isLoggedIn()" (click)="logout()">Sign out</li>
+                <li *ngIf="!isLoggedIn()"><a href="javascript:void(0)" (click)="login()">Login</a></li>
                 
             </ul>
             

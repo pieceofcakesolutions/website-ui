@@ -4,7 +4,11 @@
 
 export const environment = {
   production: false,
-  blogUrl: "http://localhost:5000"
+  blogUrl: "http://localhost:5000",
+  confirm: {
+    email: '',
+    password: ''
+  }
 };
 
 /*

@@ -1,0 +1,15 @@
+form > div {
+    max-width: 400px;
+    margin-bottom: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    flex-direction: column;
+}
+form > div > p {
+    display: flex;
+    flex-direction: row;
+}
+.spacer{
+    flex-grow: 1;
+}

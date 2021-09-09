@@ -5,17 +5,17 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 // Amplify Configuration
-import Auth from '@aws-amplify/auth';
 import Storage from '@aws-amplify/storage';
 import { AWSConfig } from './aws-exports';
+import Amplify, { Auth } from 'aws-amplify';
 
 Storage.configure(AWSConfig);
+Amplify.configure(AWSConfig);
 Auth.configure(AWSConfig);
 
 if (environment.production) {
   enableProdMode();
 }
-
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
